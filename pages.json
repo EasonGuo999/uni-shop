@@ -29,6 +29,29 @@
 		}
 	}
 	],
+	
+	"subPackages": [
+		{
+			"root": "subpkg",
+			"pages": [{
+				"path" : "goods_detail/goods_detail",
+				"style" : 
+				{
+					"navigationBarTitleText" : "",
+					"enablePullDownRefresh" : false
+				}
+			},
+			{
+				"path" : "sub_floor/sub_floor",
+				"style" : 
+				{
+					"navigationBarTitleText" : "",
+					"enablePullDownRefresh" : false
+				}
+			}]
+		}
+	],
+	
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "黑马优购",
@@ -64,7 +87,7 @@
 				"pagePath":"pages/my/my",
 				"text":"我的",
 				"iconPath":"static/tab_icons/my.png",
-				"selectedIconPath":"static/tab_icons/my-active.png"
+				"selectedIconPath":"static/tab_icons/my-active.png" 
 			}
 		] 	
 	}

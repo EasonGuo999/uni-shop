@@ -3,6 +3,27 @@
 import Vue from 'vue'
 import App from './App'
 
+//配置网络请求
+import {$http} from '@escook/request-miniprogram'
+uni.$http = $http
+$http.beforeRequest=function(options){
+	uni.showLoading({
+		title:'数据加载中...'
+	})
+}
+$http.afterRequest=function(options){
+	uni.hideLoading()
+}
+
+//封装弹窗方法
+uni.$showMsg=function(title='数据请求失败！',duration=1500){
+	uni.showToast({
+		title,
+		duration,
+		icon:'none'
+	})
+}
+
 Vue.config.productionTip = false
 
 App.mpType = 'app'
